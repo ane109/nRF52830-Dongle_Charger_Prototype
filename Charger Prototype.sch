@@ -1,0 +1,816 @@
+EESchema Schematic File Version 4
+LIBS:Charger Prototype-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Power Subsystem Prototype"
+Date "2019-06-27"
+Rev "v1.0"
+Comp "Author: Adam Eccles"
+Comment1 "For nRF52840 Dongle"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Charger_Parts:BQ24040 U1
+U 1 1 5D0012EB
+P 5050 2100
+F 0 "U1" H 5050 2815 50  0000 C CNN
+F 1 "BQ24040" H 5050 2724 50  0000 C CNN
+F 2 "Charger Prototype:BQ24040_10mil" H 5050 2100 50  0001 C CNN
+F 3 "" H 5050 2100 50  0001 C CNN
+	1    5050 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R2
+U 1 1 5D003C94
+P 4050 2600
+F 0 "R2" H 4118 2646 50  0000 L CNN
+F 1 "2k" H 4118 2555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4050 2600 50  0001 C CNN
+F 3 "~" H 4050 2600 50  0001 C CNN
+	1    4050 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2300 4050 2300
+Wire Wire Line
+	4050 2300 4050 2500
+$Comp
+L power:GNDREF #PWR0101
+U 1 1 5D005BE0
+P 4050 2900
+F 0 "#PWR0101" H 4050 2650 50  0001 C CNN
+F 1 "GNDREF" H 4055 2727 50  0000 C CNN
+F 2 "" H 4050 2900 50  0001 C CNN
+F 3 "" H 4050 2900 50  0001 C CNN
+	1    4050 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 2700 4050 2900
+$Comp
+L power:GNDREF #PWR0102
+U 1 1 5D0064A9
+P 3700 2900
+F 0 "#PWR0102" H 3700 2650 50  0001 C CNN
+F 1 "GNDREF" H 3705 2727 50  0000 C CNN
+F 2 "" H 3700 2900 50  0001 C CNN
+F 3 "" H 3700 2900 50  0001 C CNN
+	1    3700 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2100 3700 2100
+Wire Wire Line
+	3700 2100 3700 2900
+$Comp
+L Device:R_Small_US R1
+U 1 1 5D006BC2
+P 3350 2300
+F 0 "R1" H 3418 2346 50  0000 L CNN
+F 1 "4.5k" H 3418 2255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3350 2300 50  0001 C CNN
+F 3 "~" H 3350 2300 50  0001 C CNN
+	1    3350 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0103
+U 1 1 5D007463
+P 3350 2900
+F 0 "#PWR0103" H 3350 2650 50  0001 C CNN
+F 1 "GNDREF" H 3355 2727 50  0000 C CNN
+F 2 "" H 3350 2900 50  0001 C CNN
+F 3 "" H 3350 2900 50  0001 C CNN
+	1    3350 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 1900 3350 1900
+Wire Wire Line
+	3350 1900 3350 2200
+Wire Wire Line
+	3350 2400 3350 2900
+Wire Wire Line
+	4550 2500 4400 2500
+Wire Wire Line
+	4400 2500 4400 1100
+Wire Wire Line
+	4400 1100 4850 1100
+$Comp
+L Device:LED_Small_ALT D1
+U 1 1 5D00866E
+P 4950 1100
+F 0 "D1" H 4950 1335 50  0000 C CNN
+F 1 "LED" H 4950 1244 50  0000 C CNN
+F 2 "Charger Prototype:SML-D12" V 4950 1100 50  0001 C CNN
+F 3 "~" V 4950 1100 50  0001 C CNN
+	1    4950 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R4
+U 1 1 5D00958A
+P 5400 1100
+F 0 "R4" V 5195 1100 50  0000 C CNN
+F 1 "1.5k" V 5286 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5400 1100 50  0001 C CNN
+F 3 "~" H 5400 1100 50  0001 C CNN
+	1    5400 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 1100 5300 1100
+Wire Wire Line
+	5550 1700 5700 1700
+Wire Wire Line
+	5500 1100 5700 1100
+Wire Wire Line
+	5700 1100 5700 1700
+Connection ~ 5700 1700
+Wire Wire Line
+	5700 1700 5800 1700
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 5D00B59F
+P 1850 1800
+F 0 "J1" H 1958 2081 50  0000 C CNN
+F 1 "USBA_Male" H 1958 1990 50  0000 C CNN
+F 2 "Charger Prototype:USB_Male_A_UP2-AH-1-TH_3d" H 1850 1800 50  0001 C CNN
+F 3 "~" H 1850 1800 50  0001 C CNN
+	1    1850 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5D028AC9
+P 7200 3150
+F 0 "J3" H 7300 2950 50  0000 C CNN
+F 1 "JST_CONN" H 7300 2850 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 7200 3150 50  0001 C CNN
+F 3 "~" H 7200 3150 50  0001 C CNN
+	1    7200 3150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0104
+U 1 1 5D02A0AC
+P 5050 2900
+F 0 "#PWR0104" H 5050 2650 50  0001 C CNN
+F 1 "GNDREF" H 5055 2727 50  0000 C CNN
+F 2 "" H 5050 2900 50  0001 C CNN
+F 3 "" H 5050 2900 50  0001 C CNN
+	1    5050 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2900 5050 2850
+$Comp
+L Connector:Conn_01x05_Female J2
+U 1 1 5D02D30D
+P 9600 1900
+F 0 "J2" H 9628 1926 50  0000 L CNN
+F 1 "Conn_01x05_Female" H 9628 1835 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical" H 9600 1900 50  0001 C CNN
+F 3 "~" H 9600 1900 50  0001 C CNN
+	1    9600 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5D02E59C
+P 2850 2300
+F 0 "C1" H 2942 2346 50  0000 L CNN
+F 1 "1u" H 2942 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2850 2300 50  0001 C CNN
+F 3 "~" H 2850 2300 50  0001 C CNN
+	1    2850 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R5
+U 1 1 5D03002B
+P 5800 1800
+F 0 "R5" V 5700 1800 50  0000 C CNN
+F 1 "1.5k" V 5600 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5800 1800 50  0001 C CNN
+F 3 "~" H 5800 1800 50  0001 C CNN
+	1    5800 1800
+	-1   0    0    1   
+$EndComp
+Connection ~ 5800 1700
+Wire Wire Line
+	5550 2100 5800 2100
+$Comp
+L Device:R_Variable_US R3
+U 1 1 5D031DA6
+P 6400 2200
+F 0 "R3" H 6528 2246 50  0000 L CNN
+F 1 "103AT" H 6528 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6330 2200 50  0001 C CNN
+F 3 "~" H 6400 2200 50  0001 C CNN
+	1    6400 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0105
+U 1 1 5D034B08
+P 6400 3400
+F 0 "#PWR0105" H 6400 3150 50  0001 C CNN
+F 1 "GNDREF" H 6405 3227 50  0000 C CNN
+F 2 "" H 6400 3400 50  0001 C CNN
+F 3 "" H 6400 3400 50  0001 C CNN
+	1    6400 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1700 2500 1700
+Wire Wire Line
+	2850 2200 2850 1700
+$Comp
+L power:GNDREF #PWR0106
+U 1 1 5D038C77
+P 2850 2900
+F 0 "#PWR0106" H 2850 2650 50  0001 C CNN
+F 1 "GNDREF" H 2855 2727 50  0000 C CNN
+F 2 "" H 2850 2900 50  0001 C CNN
+F 3 "" H 2850 2900 50  0001 C CNN
+	1    2850 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2900 2850 2400
+Wire Wire Line
+	6400 1900 6400 2050
+$Comp
+L Connector:Conn_01x04_Female J4
+U 1 1 5D00C6AF
+P 9600 2650
+F 0 "J4" H 9628 2626 50  0000 L CNN
+F 1 "USBA_Female" H 9628 2535 50  0000 L CNN
+F 2 "Charger Prototype:USB_A_Female_UE27AC54100_3d" H 9600 2650 50  0001 C CNN
+F 3 "~" H 9600 2650 50  0001 C CNN
+	1    9600 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5D05A808
+P 8250 2300
+F 0 "C2" H 8342 2346 50  0000 L CNN
+F 1 "1u" H 8342 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8250 2300 50  0001 C CNN
+F 3 "~" H 8250 2300 50  0001 C CNN
+	1    8250 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 2200 8250 1700
+$Comp
+L power:GNDREF #PWR0107
+U 1 1 5D05A80F
+P 8250 2900
+F 0 "#PWR0107" H 8250 2650 50  0001 C CNN
+F 1 "GNDREF" H 8255 2727 50  0000 C CNN
+F 2 "" H 8250 2900 50  0001 C CNN
+F 3 "" H 8250 2900 50  0001 C CNN
+	1    8250 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 2900 8250 2400
+Text GLabel 2600 1400 2    50   Output ~ 0
+VUSB
+Wire Wire Line
+	2600 1400 2500 1400
+Wire Wire Line
+	2500 1400 2500 1700
+Connection ~ 2500 1700
+Wire Wire Line
+	2500 1700 2850 1700
+Text GLabel 9150 2550 0    50   Output ~ 0
+VUSB
+Wire Wire Line
+	9150 2550 9400 2550
+$Comp
+L power:GNDREF #PWR0108
+U 1 1 5D061F87
+P 2250 2900
+F 0 "#PWR0108" H 2250 2650 50  0001 C CNN
+F 1 "GNDREF" H 2255 2727 50  0000 C CNN
+F 2 "" H 2250 2900 50  0001 C CNN
+F 3 "" H 2250 2900 50  0001 C CNN
+	1    2250 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2000 2250 2000
+Wire Wire Line
+	2250 2000 2250 2900
+Wire Wire Line
+	2050 1800 2250 1800
+Wire Wire Line
+	2050 1900 2250 1900
+Text GLabel 2250 1900 2    50   BiDi ~ 0
+D+
+Text GLabel 2250 1800 2    50   BiDi ~ 0
+D-
+Text GLabel 9150 2750 0    50   BiDi ~ 0
+D+
+Text GLabel 9150 2650 0    50   BiDi ~ 0
+D-
+Wire Wire Line
+	9150 2650 9400 2650
+Wire Wire Line
+	9150 2750 9400 2750
+$Comp
+L power:GNDREF #PWR0109
+U 1 1 5D0675DC
+P 9150 2900
+F 0 "#PWR0109" H 9150 2650 50  0001 C CNN
+F 1 "GNDREF" H 9155 2727 50  0000 C CNN
+F 2 "" H 9150 2900 50  0001 C CNN
+F 3 "" H 9150 2900 50  0001 C CNN
+	1    9150 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 2850 9150 2850
+Wire Wire Line
+	9150 2850 9150 2900
+Text Notes 1050 7050 0    50   ~ 0
+- R1 set for 120mA "fast charge" current, or 0.8C of a 150mA battery.\n  0.8C is considered the upper limit of a typical "safe range" for Li-ion batteries, whereas 0.5C is standard.\n- R2 is using the standard value for 20% prechg and 10% term current.\n- R3 is a 10k, B=3370 NTC thermistor. Use fixed 10k to disable temp sensing.\n- ISET2 should be grounded via J2.\n- Populate R10 with a 0 ohm jumper to permanently enable U2.
+$Comp
+L power:GNDREF #PWR0110
+U 1 1 5D06B5BD
+P 8650 2900
+F 0 "#PWR0110" H 8650 2650 50  0001 C CNN
+F 1 "GNDREF" H 8655 2727 50  0000 C CNN
+F 2 "" H 8650 2900 50  0001 C CNN
+F 3 "" H 8650 2900 50  0001 C CNN
+	1    8650 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 1900 8650 1900
+Wire Wire Line
+	8650 1900 8650 2900
+Text GLabel 5900 2450 2    50   Input ~ 0
+ISET2
+Text GLabel 9150 2000 0    50   Input ~ 0
+ISET2
+Wire Wire Line
+	5550 2300 5800 2300
+Wire Wire Line
+	5800 2300 5800 2450
+Wire Wire Line
+	5800 2450 5900 2450
+Text GLabel 5900 2200 2    50   Output ~ 0
+CHG
+Text GLabel 4150 1100 0    50   Output ~ 0
+PG
+Wire Wire Line
+	4150 1100 4400 1100
+Connection ~ 4400 1100
+Wire Wire Line
+	5900 2200 5800 2200
+Wire Wire Line
+	5800 2200 5800 2100
+Text GLabel 9150 1800 0    50   Output ~ 0
+PG
+Text GLabel 9150 2200 0    50   Output ~ 0
+CHG
+Wire Wire Line
+	9150 1800 9400 1800
+Wire Wire Line
+	9400 2000 9150 2000
+Wire Wire Line
+	9400 2100 9250 2100
+Wire Wire Line
+	9250 2100 9250 2200
+Wire Wire Line
+	9250 2200 9150 2200
+$Comp
+L Charger_Parts:LTC2942 U3
+U 1 1 5D09989F
+P 6450 4700
+F 0 "U3" H 6450 5165 50  0000 C CNN
+F 1 "LTC2942" H 6450 5074 50  0000 C CNN
+F 2 "Charger Prototype:LTC2942" H 6450 4700 50  0001 C CNN
+F 3 "" H 6450 4700 50  0001 C CNN
+	1    6450 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Charger_Parts:XCL210D U2
+U 1 1 5D09D9FF
+P 2800 4700
+F 0 "U2" H 3050 5200 50  0000 C CNN
+F 1 "XCL210D" H 3050 5100 50  0000 C CNN
+F 2 "Charger Prototype:XCL210_10mil" H 2800 4700 50  0001 C CNN
+F 3 "" H 2800 4700 50  0001 C CNN
+	1    2800 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 4300 2800 4150
+Wire Wire Line
+	2800 4150 2100 4150
+Wire Wire Line
+	2100 4150 2100 4500
+Wire Wire Line
+	2100 4500 2250 4500
+$Comp
+L Device:C_Small C3
+U 1 1 5D0B0DA3
+P 2100 4800
+F 0 "C3" H 2200 4750 50  0000 L CNN
+F 1 "22u" H 2200 4850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2100 4800 50  0001 C CNN
+F 3 "~" H 2100 4800 50  0001 C CNN
+	1    2100 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2250 4700 2100 4700
+Wire Wire Line
+	2700 5100 2100 5100
+Wire Wire Line
+	2100 5100 2100 4900
+Connection ~ 2100 5100
+$Comp
+L power:GNDREF #PWR0111
+U 1 1 5D0BA9B7
+P 1650 4750
+F 0 "#PWR0111" H 1650 4500 50  0001 C CNN
+F 1 "GNDREF" H 1655 4577 50  0000 C CNN
+F 2 "" H 1650 4750 50  0001 C CNN
+F 3 "" H 1650 4750 50  0001 C CNN
+	1    1650 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4700 1650 4700
+Wire Wire Line
+	1650 4700 1650 4750
+Connection ~ 2100 4700
+Wire Wire Line
+	1250 5100 2100 5100
+$Comp
+L power:GNDREF #PWR0112
+U 1 1 5D0C11B6
+P 2900 5250
+F 0 "#PWR0112" H 2900 5000 50  0001 C CNN
+F 1 "GNDREF" H 2905 5077 50  0000 C CNN
+F 2 "" H 2900 5250 50  0001 C CNN
+F 3 "" H 2900 5250 50  0001 C CNN
+	1    2900 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0113
+U 1 1 5D0C2D8D
+P 3950 4800
+F 0 "#PWR0113" H 3950 4550 50  0001 C CNN
+F 1 "GNDREF" H 3955 4627 50  0000 C CNN
+F 2 "" H 3950 4800 50  0001 C CNN
+F 3 "" H 3950 4800 50  0001 C CNN
+	1    3950 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5D0C548B
+P 3950 4650
+F 0 "C4" H 4050 4600 50  0000 L CNN
+F 1 "10u" H 4050 4700 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3950 4650 50  0001 C CNN
+F 3 "~" H 3950 4650 50  0001 C CNN
+	1    3950 4650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3350 4900 3600 4900
+Wire Wire Line
+	3600 4900 3600 5100
+Wire Wire Line
+	2900 5250 2900 5100
+Wire Wire Line
+	3350 4500 3950 4500
+Wire Wire Line
+	3950 4800 3950 4750
+Wire Wire Line
+	3950 4550 3950 4500
+Connection ~ 3950 4500
+Connection ~ 8250 1700
+Wire Wire Line
+	8250 1700 8500 1700
+$Comp
+L Device:C_Small C5
+U 1 1 5D0DEF89
+P 7850 2300
+F 0 "C5" H 7942 2346 50  0000 L CNN
+F 1 "0.1u" H 7942 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7850 2300 50  0001 C CNN
+F 3 "~" H 7850 2300 50  0001 C CNN
+	1    7850 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 2200 7850 1700
+$Comp
+L power:GNDREF #PWR0114
+U 1 1 5D0DEF90
+P 7850 2900
+F 0 "#PWR0114" H 7850 2650 50  0001 C CNN
+F 1 "GNDREF" H 7855 2727 50  0000 C CNN
+F 2 "" H 7850 2900 50  0001 C CNN
+F 3 "" H 7850 2900 50  0001 C CNN
+	1    7850 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 2900 7850 2400
+Wire Wire Line
+	2850 1700 4550 1700
+Connection ~ 2850 1700
+Connection ~ 7850 1700
+Wire Wire Line
+	7850 1700 8250 1700
+$Comp
+L Device:R_Small_US R6
+U 1 1 5D0FB23B
+P 6900 2200
+F 0 "R6" H 6968 2246 50  0000 L CNN
+F 1 "75m" H 6968 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 6900 2200 50  0001 C CNN
+F 3 "~" H 6900 2200 50  0001 C CNN
+	1    6900 2200
+	1    0    0    -1  
+$EndComp
+Connection ~ 6400 3250
+Wire Wire Line
+	6400 3250 6400 3400
+Wire Wire Line
+	5800 1700 6900 1700
+Wire Wire Line
+	6900 2650 6900 2450
+Connection ~ 6900 1700
+Wire Wire Line
+	6900 1700 7850 1700
+Text GLabel 7450 1950 2    50   Output ~ 0
+S+
+Text GLabel 7450 2450 2    50   Output ~ 0
+S-
+Text GLabel 5650 4500 0    50   Input ~ 0
+S+
+Text GLabel 7250 4500 2    50   Input ~ 0
+S-
+Connection ~ 6900 2450
+Wire Wire Line
+	6900 2300 6900 2450
+Wire Wire Line
+	5900 4900 5700 4900
+Wire Wire Line
+	5700 4900 5700 5300
+Wire Wire Line
+	5900 4700 5500 4700
+$Comp
+L power:GNDREF #PWR0115
+U 1 1 5D0EA6AF
+P 5500 5450
+F 0 "#PWR0115" H 5500 5200 50  0001 C CNN
+F 1 "GNDREF" H 5505 5277 50  0000 C CNN
+F 2 "" H 5500 5450 50  0001 C CNN
+F 3 "" H 5500 5450 50  0001 C CNN
+	1    5500 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 4700 5500 5450
+Wire Wire Line
+	5900 4500 5650 4500
+Wire Wire Line
+	7000 4500 7250 4500
+$Comp
+L Device:R_Small_US R7
+U 1 1 5D0FB67F
+P 7650 4550
+F 0 "R7" H 7718 4596 50  0000 L CNN
+F 1 "2k" H 7718 4505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7650 4550 50  0001 C CNN
+F 3 "~" H 7650 4550 50  0001 C CNN
+	1    7650 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R8
+U 1 1 5D0FC90D
+P 7950 4550
+F 0 "R8" H 8018 4596 50  0000 L CNN
+F 1 "2k" H 8018 4505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7950 4550 50  0001 C CNN
+F 3 "~" H 7950 4550 50  0001 C CNN
+	1    7950 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R9
+U 1 1 5D0FCB0A
+P 8250 4550
+F 0 "R9" H 8318 4596 50  0000 L CNN
+F 1 "2k" H 8318 4505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8250 4550 50  0001 C CNN
+F 3 "~" H 8250 4550 50  0001 C CNN
+	1    8250 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 4700 7650 4700
+Wire Wire Line
+	7000 4900 7950 4900
+Wire Wire Line
+	5700 5300 8250 5300
+Wire Wire Line
+	7650 4650 7650 4700
+Wire Wire Line
+	7950 4650 7950 4900
+Wire Wire Line
+	8250 4650 8250 5300
+Wire Wire Line
+	8500 1700 8500 1400
+Wire Wire Line
+	8500 1400 8750 1400
+Connection ~ 8500 1700
+Wire Wire Line
+	8500 1700 9400 1700
+Text GLabel 8750 1400 2    50   Output ~ 0
+Vbat
+Wire Wire Line
+	7650 4450 7650 4350
+Wire Wire Line
+	7650 4350 7950 4350
+Wire Wire Line
+	7950 4350 7950 4450
+Wire Wire Line
+	7950 4350 8250 4350
+Wire Wire Line
+	8250 4350 8250 4450
+Connection ~ 7950 4350
+Text GLabel 7850 4150 0    50   Input ~ 0
+Vbat
+Wire Wire Line
+	7950 4150 7950 4350
+Wire Wire Line
+	7950 4150 7850 4150
+Text GLabel 4550 4500 2    50   Input ~ 0
+Vbat
+Wire Wire Line
+	2250 4900 2100 4900
+Connection ~ 2100 4900
+Text GLabel 1250 5100 0    50   Output ~ 0
+1p8Vout
+Wire Wire Line
+	6400 2350 6400 3250
+Text GLabel 4550 5100 2    50   Input ~ 0
+CE
+Wire Wire Line
+	3950 4500 4300 4500
+Wire Wire Line
+	3600 5100 4300 5100
+$Comp
+L Device:R_Small_US R10
+U 1 1 5D15C2F2
+P 4300 4800
+F 0 "R10" H 4368 4846 50  0000 L CNN
+F 1 "DNS" H 4368 4755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4300 4800 50  0001 C CNN
+F 3 "~" H 4300 4800 50  0001 C CNN
+	1    4300 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R11
+U 1 1 5D15CF97
+P 4300 5300
+F 0 "R11" H 4368 5346 50  0000 L CNN
+F 1 "DNS" H 4368 5255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4300 5300 50  0001 C CNN
+F 3 "~" H 4300 5300 50  0001 C CNN
+	1    4300 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0116
+U 1 1 5D15D3EF
+P 4300 5500
+F 0 "#PWR0116" H 4300 5250 50  0001 C CNN
+F 1 "GNDREF" H 4305 5327 50  0000 C CNN
+F 2 "" H 4300 5500 50  0001 C CNN
+F 3 "" H 4300 5500 50  0001 C CNN
+	1    4300 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 4700 4300 4500
+Connection ~ 4300 4500
+Wire Wire Line
+	4300 4500 4550 4500
+Wire Wire Line
+	4300 5100 4300 4900
+Connection ~ 4300 5100
+Wire Wire Line
+	4300 5100 4550 5100
+Wire Wire Line
+	4300 5200 4300 5100
+Wire Wire Line
+	4300 5500 4300 5400
+$Comp
+L Connector:Conn_01x05_Female J5
+U 1 1 5D16CD21
+P 9850 5000
+F 0 "J5" H 9878 5026 50  0000 L CNN
+F 1 "Conn_01x05_Female" H 9878 4935 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical" H 9850 5000 50  0001 C CNN
+F 3 "~" H 9850 5000 50  0001 C CNN
+	1    9850 5000
+	1    0    0    -1  
+$EndComp
+Text GLabel 9050 5100 0    50   Output ~ 0
+CE
+Text GLabel 9250 5350 0    50   Input ~ 0
+1p8Vout
+Wire Wire Line
+	9650 5100 9050 5100
+Wire Wire Line
+	9650 5200 9450 5200
+Wire Wire Line
+	9450 5200 9450 5350
+Wire Wire Line
+	9450 5350 9250 5350
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 5D0DD731
+P 7000 2850
+F 0 "SW1" H 6950 3100 50  0000 R CNN
+F 1 "SW_SPDT" H 7050 3000 50  0000 R CNN
+F 2 "Charger Prototype:Wurth_SPDT_Slide_450301014042" H 7000 2850 50  0001 C CNN
+F 3 "~" H 7000 2850 50  0001 C CNN
+	1    7000 2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7000 3050 7000 3150
+Wire Wire Line
+	6400 3250 7000 3250
+NoConn ~ 7100 2650
+Connection ~ 5800 2100
+$Comp
+L Device:LED_Small_ALT D2
+U 1 1 5D02EF68
+P 5800 2000
+F 0 "D2" H 5800 1900 50  0000 C CNN
+F 1 "LED" H 5800 1800 50  0000 C CNN
+F 2 "Charger Prototype:SML-D12" V 5800 2000 50  0001 C CNN
+F 3 "~" V 5800 2000 50  0001 C CNN
+	1    5800 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 1900 6400 1900
+Wire Wire Line
+	6900 2450 7450 2450
+Wire Wire Line
+	6900 1950 6900 1700
+Wire Wire Line
+	6900 2100 6900 1950
+Connection ~ 6900 1950
+Wire Wire Line
+	6900 1950 7450 1950
+Text GLabel 8400 5300 2    50   Output ~ 0
+SCL
+Text GLabel 9450 4800 0    50   Output ~ 0
+SCL
+Wire Wire Line
+	9450 4800 9650 4800
+Wire Wire Line
+	8400 5300 8250 5300
+Connection ~ 8250 5300
+Wire Wire Line
+	7950 4900 9650 4900
+Connection ~ 7950 4900
+Text GLabel 8600 4700 2    50   Output ~ 0
+CC
+Text GLabel 9450 5000 0    50   Output ~ 0
+CC
+Wire Wire Line
+	7650 4700 8600 4700
+Connection ~ 7650 4700
+Wire Wire Line
+	9450 5000 9650 5000
+$EndSCHEMATC
