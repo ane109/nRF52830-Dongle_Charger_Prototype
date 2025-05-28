@@ -1,0 +1,13 @@
+Power connections:
+Cut SB2 on nrF52840-Dongle. Connect top half (nearest P1) to J2-1 (square pad)
+
+Jumper connections:
+Connect J2-3 to J2-4
+
+Board-to-board connections:
+Connect P0.13 to J5-1 (SCL)
+Connect P0.15 to J5-2 (SDA)
+Connect P0.17 to J5-3 (CC)
+(OPTIONAL) Connect P0.31 to J5-4 (1.8v CE)
+(OPTIONAL) Connect P0.29 to J2-2 (ISET2)
+(OPTIONAL) Connect P0.20 to J2-5 (PG)
